@@ -12,8 +12,8 @@
   justify-content: space-between;
 }
 .sidebarMiniAvatar {
-  width: 40px;
-  height: 40px;
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
   object-fit: cover;
   margin: 10px;
@@ -29,9 +29,7 @@
 
   padding: 8px;
 }
-.chatIcon:hover {
-  color: #E9EDEF;
-}
+
 .statusIcon {
   display: inline-flex;
   align-items: center;
@@ -56,13 +54,44 @@
   justify-content: center;
   color: #E9EDEF;
   cursor: pointer;
+
 }
+
+.communityIcon svg {
+  width: 24px; /* Ajusta el tamaño del icono */
+  height: 24px;
+}
+
+.settingsButton {
+  display: inline-flex; /* Asegura que el contenido interno se alinee correctamente */
+  justify-content: center;
+  align-items: center;
+  background-color: #202c33; /* Fondo del botón */
+  color: rgb(174, 186, 193); /* Color del ícono */
+  border-radius: 50%; /* Hace que el botón sea circular */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.settingsButton:hover {
+  background-color: #2a3942; /* Cambia el color de fondo al pasar el mouse */
+  color: #d1d7db; /* Cambia el color del ícono al pasar el mouse */
+}
+
+.settingsButton svg {
+  width: 24px; /* Ajusta el tamaño del ícono */
+  height: 24px;
+}
+
 
 .upperButtons,
 .lowerButtons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px; /* Espaciado entre botones */
+  gap: 20px; /* Espaciado entre botones */
+  line-height: 16px;
 }
 

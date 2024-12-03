@@ -2,9 +2,10 @@
 .contactSidebar {
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Oculta cualquier desbordamiento */
+  overflow: hidden; 
   flex-direction: column;
-  background-color: #111B21; /* Fondo oscuro estilo WhatsApp */
+  background-color: #111B21;
+  border-right: 1px solid #2a2f32;
 }
 
 /* Botón de "Chats archivados" */
@@ -15,7 +16,7 @@
   font-size: 1.1em;
   cursor: pointer;
   background-color: #111B21;
-  border-bottom: 1px solid #2a2f32; /* Color del borde para integrar con el fondo */
+  border-bottom: 1px solid #2a2f32; 
 }
 
 .archivados:hover {
@@ -24,6 +25,7 @@
 
 .archivadosIcon {
   margin-right: 10px;
+  color: rgb(0,168,132);
 }
 
 .archivadosText {
@@ -41,8 +43,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  overflow-y: auto; /* Barra de desplazamiento solo vertical */
-  height: calc(100% - 60px); /* Ajusta según el tamaño total de la barra lateral */
+  overflow-y: auto; 
+  height: calc(100% - 60px);
 }
 
 .contact-item {
@@ -61,7 +63,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover; /* Ajusta la imagen proporcionalmente */
+  object-fit: cover; 
   margin-right: 10px;
   border: 2px solid #2a2f32;
 }
@@ -85,8 +87,8 @@
 
 /* Barra de desplazamiento personalizada */
 .contacts-list {
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #888 #111B21; /* Firefox */
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #111B21; 
 }
 
 .contacts-list::-webkit-scrollbar {
@@ -108,52 +110,78 @@
 
 /* Sección de botones de chats */
 .chatsButtons {
-  display: flex
-  ;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-      gap: 8px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center;
+  gap: 8px; 
+  padding: 10px; 
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
-.allChats {
-  display: inline-flex; /* Permite que cada botón se alinee en línea */
-  background-color: #0a332c;
-  color: #00a884;
-}
-
-.allChats, .notReadsChats, .favChats, .groupChats {
-  
-
+/* Botones individuales */
+.allChats, 
+.notReadsChats, 
+.favChats, 
+.groupChats {
+  flex: 1 1 calc(25% - 8px); 
+  max-width: 150px;
+  min-width: 80px; 
   background-color: rgb(32, 44, 51);
-  border: 0px none rgb(134, 150, 160);
+  border: none;
   border-radius: 42px;
   box-sizing: border-box;
   color: rgb(134, 150, 160);
   cursor: pointer;
-  display: block;
   font-family: "SF Pro Text", "SF Pro Icons", system, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Ubuntu, Cantarell, "Fira Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  height: 31.9844px;
-  line-height: 19.995px;
-  margin: 0px;
+  height: 32px;
+  line-height: 20px;
+  margin: 0;
   padding: 6px 12px;
-  position: static;
   text-align: center;
-  text-decoration: none solid rgb(134, 150, 160);
-  text-transform: none;
-  width: 87.2188px;
-
- 
+  transition: all 0.3s ease;
 }
 
-.chatsButtons > .allChats:last-child,
-.chatsButtons > .notReadsChats:last-child,
-.chatsButtons > .favChats:last-child,
-.chatsButtons > .groupChats:last-child {
-  margin-right: 0; /* Elimina el margen derecho en el último botón */
+
+.allChats {
+  background-color: #0a332c;
+  color: #00a884;
 }
+
+
+.chatsButtons > :last-child {
+  margin-right: auto; 
+}
+
+
+@media (max-width: 768px) {
+  .chatsButtons {
+    justify-content: flex-start;
+    gap: 8px; 
+  }
+
+  .allChats, 
+  .notReadsChats, 
+  .favChats, 
+  .groupChats {
+    flex: 1 1 calc(50% - 8px); 
+    max-width: unset; 
+  }
+}
+
+@media (max-width: 480px) {
+  .allChats, 
+  .notReadsChats, 
+  .favChats, 
+  .groupChats {
+    flex: 1 1 100%; 
+  }
+}
+
+
 /* Header de la sidebar */
 .contactSidebarHeader {
   display: flex;
@@ -161,13 +189,13 @@
   align-items: center;
   padding-left: 16px;
   padding-right: 10px;
-  background-color: #111B21;  /* Fondo oscuro */
-  color: #E9EDEF;  /* Texto claro */
-  height: 64px; /* Altura del header */
+  background-color: #111B21; 
+  color: #E9EDEF; 
+  height: 64px; 
   width: 100%;
 }
 
-/* Título del Header */
+
 .contactSidebarHeader h2 {
   font-size: 1.375rem;
   font-weight: bold;
@@ -182,15 +210,15 @@
 /* Contenedor de los íconos del header */
 .contactSidebarHeaderIcons {
   display: flex;
-  gap: 12px; /* Espacio entre los íconos */
+  gap: 12px; 
   align-items: center;
 }
 
 .contactSidebarHeaderIcons .icon {
-  font-size: 1.5em; /* Tamaño de los íconos */
+  font-size: 1.5em;
   cursor: pointer;
-  color: #B8C7D0; /* Color de los íconos */
-  transition: color 0.3s ease; /* Transición al pasar el mouse */
+  color: #B8C7D0;
+  transition: color 0.3s ease; 
 }
 
 .contactSidebarHeaderIcons .icon:hover {
@@ -220,7 +248,7 @@
 }
 
 .search-container input::placeholder {
-  color: #54656f; /* Placeholder similar al diseño original */
+  color: #54656f; 
   font-size: 14px;
 }
 

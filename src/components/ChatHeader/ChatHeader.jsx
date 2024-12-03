@@ -6,19 +6,13 @@ import { IoIosArrowDown } from "react-icons/io";
 import "./ChatHeader.css";
 
 const ChatHeader = ({ contact }) => {
-  console.log(contact); // Verifica que los datos lleguen correctamente
-
-  // Validación del contacto
-  const contactStatus = contact.lastSeen
-    ? `Última conexión hoy a las ${contact.lastSeen}`
-    : "Última conexión desconocida";
 
   return (
     <header className="chatHeader">
       {/* Información del contacto */}
       <div className="contactInfo">
         <img
-          src={contact.avatar || 'ruta_a_imagen_por_defecto.jpg'} // Imagen por defecto si no hay avatar
+          src={contact.avatar}
           alt={`${contact.nombre} avatar`}
           className="contactAvatar"
         />

@@ -1,17 +1,32 @@
-.messagesList {  
+.messagesList {
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto; /* Habilitar scroll */
     padding: 10px;
     flex-grow: 1;
-    
     max-height: 100vh;
-    overflow-y: auto;   
-}
-.messageContainer.user {
-    background-color: #202C33;  /* Fondo gris claro */
-    align-self: flex-start;  /* Alinea el mensaje a la izquierda */
-    text-align: left;  /* Alinea el texto a la izquierda */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);  /* Agrega sombra sutil */
-  }   
-
+  
+    /* Scrollbar personalizado */
+    scrollbar-width: thin; /* Firefox: barra delgada */
+    scrollbar-color: rgba(255, 255, 255, 0.16) transparent; /* Firefox */
+  }
+  
+  .messagesList::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra */
+    height: 6px; /* Altura de la barra horizontal (si es necesario) */
+    background: transparent; /* Fondo de la barra */
+  }
+  
+  .messagesList::-webkit-scrollbar-track {
+    background: transparent; /* Fondo del track */
+  }
+  
+  .messagesList::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.16); /* Color del thumb (barra de desplazamiento) */
+    border-radius: 0px; /* Esquinas cuadradas */
+  }
+  
+  .messagesList::-webkit-scrollbar-corner {
+    background: transparent; /* Fondo de la esquina (si hay scroll horizontal y vertical) */
+  }
+  

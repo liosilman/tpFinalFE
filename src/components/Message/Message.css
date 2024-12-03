@@ -1,94 +1,96 @@
 /* Contenedor de mensajes */
 .messageContainer {
-        align-items: stretch;
-        border-radius: 6px;
-        display: flex; /* Usamos flexbox para mantener la estructura */
-        flex-direction: column; /* Para que los elementos se apilen verticalmente */
-        height: auto; 
-        margin: 5px 0; /* Añadí margen para separar los mensajes */
-        max-width: 85%;
-        min-width: 70px;
-        padding: 6px 8px 10px 9px; /* Padding adecuado para espacio interno */
-        box-shadow: 0px 2.5px 0.7px -1px #222C33;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        position: relative;
-        background-color: #202C33; /* Fondo base para el contenedor */
-      }
-      
-      /* Información de tiempo del mensaje */
-      .message-time {
-        font-size: .6875rem; 
-        color: #888;
-        text-align: right;
-        line-height: 1.2rem;
-        margin-top: 4px; /* Separación superior para evitar que quede pegado al texto */
-        white-space: nowrap; /* Evita que el tiempo se rompa en varias líneas */
-        align-self: flex-end; /* Alinea la hora a la derecha */
-      }
-      
-      /* Información adicional del mensaje (leer, etc.) */
-      .messageInfo {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end; /* Alinea el estado a la derecha */
-        font-size: .6875rem;
-        color: rgba(255, 255, 255, .6);
-        margin-top: 4px; /* Separación superior para no solaparse con la hora */
-        line-height: 15px;
-        align-self: flex-end; /* Alinea el estado a la derecha */
-      }
-      
-      /* Iconos de estado de los mensajes */
-      .messageIconNotRead {
-        color: #6c757d;
-      }
-      
-      .messageIconRead {
-        color: #53bdeb;
-      }
-      
-      .messageIconSend {
-        color: #6c757d;
-      }
-      
-      /* Estilo de los mensajes del usuario */
-      .messageContainer.me {
-        align-self: flex-end;
-        background-color: #005C4B; /* Fondo para mensajes enviados */
-      }
-      
-      /* Estilo de los mensajes del otro usuario */
-      .messageContainer.user {
-        background-color: #202C33; /* Fondo para mensajes recibidos */
-        align-self: flex-start;
-        text-align: left;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      
-      /* Estilo del texto del mensaje */
-      .messageText {
-        font-size: 14.2px;
-        font-weight: 400;
-        color: rgb(233, 237, 239);
-        line-height: 19px; /* Aumenta el espacio entre líneas para una mejor legibilidad */
-        text-align: start;
-        white-space: pre-wrap;
-        word-break: break-word;
-        max-width: 100%;
-        margin-bottom: 4px; /* Añadí margen inferior para separar el texto de la info */
-      }
-      
-      /* Estilo para el contenedor de los mensajes */
-      .messages {
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-        padding: 10px;
-        flex-grow: 1;
-        height: 100vh;
-        max-height: 100vh;
-        padding-bottom: 20px;
-      }
-      
+  align-items: stretch;
+  border-radius: 8px; /* Redondeado más suave para parecerse a WhatsApp */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 4px 0; /* Ajuste menor al margen */
+  max-width: 75%; /* Reducción del ancho máximo para que no ocupe tanto espacio */
+  min-width: 50px; /* Permitir mensajes cortos */
+  padding: 8px 10px; /* Más espacio interno */
+  box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  background-color: #202C33;
+}
+
+/* Mensajes del usuario actual */
+.messageContainer.me {
+  align-self: flex-end;
+  background-color: #005C4B; /* Fondo más vibrante */
+}
+
+/* Mensajes de otros usuarios */
+.messageContainer.user {
+  align-self: flex-start;
+  background-color: #202C33;
+  text-align: left;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); /* Ajuste de la sombra */
+}
+
+/* Texto del mensaje */
+.messageText {
+  font-size: 14px;
+  font-weight: 400;
+  color: #E9EDEF;
+  line-height: 1.4rem;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 100%;
+  margin-bottom: 3px; /* Más compacto */
+}
+
+/* Hora del mensaje */
+.messageTime {
+  font-size: 12px; /* Un poco más pequeño */
+  color: #A1A1A1;
+  text-align: right;
+  line-height: 1.2rem;
+  margin-top: 2px;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+/* Información adicional del mensaje */
+.messageInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+  align-self: flex-end;
+}
+
+/* Iconos de estado */
+.messageIconNotRead {
+  color: #6c757d;
+}
+
+.messageIconRead {
+  color: #53bdeb;
+}
+
+.messageIconSend {
+  color: #6c757d;
+}
+
+/* Contenedor general de los mensajes */
+.messagesList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 0px 19px 0px 25px; /* Mayor separación en los laterales */
+  flex-grow: 1;
+  height: 100vh;
+  max-height: 100vh;
+  padding-bottom: 20px;
+}
+.messageInfo svg {
+  height: 14px;
+  width: 18px;  
+} 

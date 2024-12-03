@@ -35,7 +35,7 @@ const InputMessage = ({ messageText, setMessageText, onSend }) => {
       <form onSubmit={handleSubmit} className="messageForm">
         <input
           type="text"
-          placeholder="Type a message"
+          placeholder="Escribe un mensaje"
           value={messageText}
           onChange={handleInputChange}
         />

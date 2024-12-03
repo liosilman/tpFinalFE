@@ -1,106 +1,104 @@
 .inputMessageContainer {
-    /* Colores */
-    background-color: #202C33;
-  
-    /* Display */
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  
-    /* Otros */
-    font-size: 1rem;
-    padding: 0.6rem 0 0.7rem 1.7rem;
-  }
-  
-  /* Formulario */
-  .messageForm {
-    /* Display */
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    position: relative;
-  
-    /* Otros */
-    height: 100%;
-    padding-left: 1.2rem;
-    padding-right: 1rem;
-    width: 100%;
-  }
-  
-  .messageForm input {
-    /* Colores */
-    background-color: #2A3942;
-    color: var(--dark-gray-2);
-  
-    /* Otros */
-    border: none;
-    border-radius: 9px;
-    font-size: 1rem;
-    height: 2.7rem;
-    padding-left: 0.9rem;
-    width: 100%;
-  }
-  
-  .messageForm input:focus {
-    outline: none;
-  }
-  
-  .messageForm input:focus + .message-input-label {
-    display: none;
-  }
-  
-  .message-input-label {
-    /* Colores */
-    color: var(--dark-gray-1);
-  
-    /* Display */
-    left: 2.2rem;
-    position: absolute;
-    top: 30%;
-  
-    /* Otros */
-    cursor: text;
-    font-size: 1rem;
-  }
-  
-  /* Iconos */
-  .leftIcons {
-    /* Display */
-    display: flex;
-    gap: 1rem;
-    color: #8696A0;
-  }
-  
-  .buttonIcon {
-    /* Colores */
-    background: none;
-    border: none;
-    color: #8696A0;
-  
-    /* Display */
-    display: flex;
-    align-items: center;
-  
-    /* Otros */
-    font-size: 2rem;
-  }
-  
-  .buttonIcon:hover {
-    cursor: pointer;
-  }
-  
-  .sendIcon {
-    /* Display */
-    position: absolute;
-    right: -29px;
-  
-    /* Otros */
-    font-size: 2rem;
-    padding-left: 0.5rem;
-    transform: rotate(43deg);
-  }
-  
-  .microphone-icon {
-    font-size: 0.9rem;
-  }
-  
+  /* Colores */
+  background-color: #202C33;
+
+  /* Display */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  /* Otros */
+  font-size: 0.65rem;  /* Reducimos el tamaño de la fuente general */
+  padding: 0.5rem 0 0.6rem 1.5rem;  /* Reducimos el padding para hacer el componente más compacto */
+}
+
+/* Formulario */
+.messageForm {
+  /* Display */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+
+  /* Otros */
+  height: 100%;
+  padding-left: 1rem;  /* Reducimos el padding */
+  padding-right: 1.5rem;  /* Reducimos el padding */
+  width: 100%;
+}
+
+.messageForm input {
+  /* Colores */
+  background-color: #2A3942;
+  color: #D1D7DB;
+
+  /* Otros */
+  border: none;
+  border-radius: 9px;
+  font-size: 0.9rem;  /* Reducimos el tamaño de la fuente del input */
+  height: 2.4rem;  /* Reducimos la altura del input */
+  padding-left: 0.8rem;  /* Reducimos el padding dentro del input */
+  width: 100%;
+}
+
+.messageForm input:focus {
+  outline: none;
+}
+
+.messageForm input:focus + .message-input-label {
+  display: none;
+}
+
+.message-input-label {
+  /* Colores */
+  color: rgb(209, 215, 219);
+
+  /* Display */
+  left: 2.2rem;
+  position: absolute;
+  top: 30%;
+
+  /* Otros */
+  cursor: text;
+  font-size: 0.9rem;  /* Reducimos el tamaño de la etiqueta */
+}
+
+/* Iconos */
+.leftIcons {
+  /* Display */
+  display: flex;
+  gap: 0.8rem;  /* Reducimos el espacio entre los íconos */
+  color: #8696A0;
+}
+
+.buttonIcon {
+  /* Colores */
+  background: none;
+  border: none;
+  color: #8696A0;
+
+  /* Display */
+  display: flex;
+  align-items: center;
+
+  /* Otros */
+  font-size: 1.6rem;  /* Reducimos el tamaño de los íconos */
+}
+
+.buttonIcon:hover {
+  cursor: pointer;
+}
+
+.buttonIcon
+{
+  cursor: pointer;
+  padding-right: 12px;
+}
+
+
+/* Placeholder */
+.messageForm input::placeholder {
+  color: #A1A1A1;  /* El color del placeholder */
+  opacity: 1;
+  font-size: 0.85rem;  /* Reducimos un poco más el tamaño del placeholder */
+}
