@@ -79,19 +79,21 @@ const WhatsAppScreen = () => {
           }}
         />
       </div> 
-      <div 
-        className="mainChatContainer">
-        <div className="chatHeaderContainer"> 
+      <div className="mainChatContainer">
+        <div className="chatHeaderContainer">
           {selectedContact && <ChatHeader contact={selectedContact} />}
         </div>
-        
+
         {selectedContact ? (
           <ChatContainer
             selectedContact={selectedContact}
             onSendMessage={handleSendMessage}
           />
-        ) : ( 
-          <div className="placeholder">Selecciona un contacto para chatear.</div>
+        ) : (
+          <div className="placeholder">
+            <img src="/images/home-bg.png" alt="home" />
+            
+          </div>
         )}
       </div>
     </div>

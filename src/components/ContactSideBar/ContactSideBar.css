@@ -2,7 +2,7 @@
 .contactSidebar {
   width: 100%;
   height: 100%;
-  overflow: hidden; 
+  display: flex; 
   flex-direction: column;
   background-color: #111B21;
   border-right: 1px solid #2a2f32;
@@ -16,7 +16,7 @@
   font-size: 1.1em;
   cursor: pointer;
   background-color: #111B21;
-  border-bottom: 1px solid #2a2f32; 
+  border-bottom: 1px solid #2a2f32;
 }
 
 .archivados:hover {
@@ -38,86 +38,133 @@
   word-wrap: break-word;
 }
 
-/* Lista de contactos */
+/* Contenedor principal de la barra lateral */
 .contacts-list {
   padding: 0;
   margin: 0;
   list-style: none;
-  overflow-y: auto; 
-  height: calc(100% - 60px);
+  overflow-y: auto;
+  flex-grow: 1;
+  background-color: #111B21;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Contacto individual */
 .contact-item {
   display: flex;
-  padding: 10px 15px;
   align-items: center;
+  justify-content: flex-start; 
   cursor: pointer;
   border-bottom: 1px solid #2a2f32;
+  height: 90px;
+  padding-right: 15px;
 }
 
 .contact-item:hover {
   background-color: #202C33;
 }
 
+/* Contenedor de avatar */
+.contact-avatar-container {
+  display: flex;
+  align-items: center;
+  padding: 0px 15px 0px 13px;
+  margin: -1px;
+  border: none;
+}
+
+/* Avatar */
 .contact-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover; 
+  object-fit: cover;
   margin-right: 10px;
-  border: 2px solid #2a2f32;
+  border: none;
 }
 
+/* Contenedor de información del contacto */
 .contact-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; 
+  flex-grow: 1;
+  position: relative; 
 }
 
+/* Nombre del contacto */
 .contact-name {
   font-weight: bold;
   font-size: 1.1em;
   color: #E9EDEF;
+  margin-bottom: 3px; 
+  text-align: left; 
 }
 
+/* Último mensaje del contacto */
 .contact-lastMessage {
   font-size: 0.9em;
   color: #8696A0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px; 
+  margin-bottom: 5px;
 }
 
-/* Barra de desplazamiento personalizada */
-.contacts-list {
-  scrollbar-width: thin; 
-  scrollbar-color: #888 #111B21; 
+/* Hora del último mensaje, centrada sobre el mensaje */
+.contact-time {
+  font-size: 0.75em;
+  color: #8696A0;
+  position: absolute;
+  top: 5px; 
+  right: 15px; 
+  text-align: right; 
 }
 
-.contacts-list::-webkit-scrollbar {
-  width: 8px;
+.contact-lastMessageWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  flex-grow: 1;
+} 
+
+/* Ajustamos el contenedor del icono para que esté antes del texto */
+.contact-statusIcon {
+  display: flex;
+  align-items: center;
+  order: -1; 
 }
 
-.contacts-list::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
+.contact-statusIcon svg {
+  height: 14px;
+  width: 18px;  
 }
 
-.contacts-list::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+.statusIconRead {
+  color: #34b7f1; 
 }
 
-.contacts-list::-webkit-scrollbar-track {
-  background: #111B21;
+.statusIconNotRead {
+  color: #8696a0; 
 }
 
-/* Sección de botones de chats */
+.statusIconSend {
+  color: #8696a0; 
+}
+
+
+/* Sección de botones de chats (prompt) */
 .chatsButtons {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  align-items: center;
-  gap: 8px; 
-  padding: 10px; 
-  width: 100%; 
-  box-sizing: border-box; 
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #111B21; 
+  border-top: 1px solid #2a2f32; 
+  flex-shrink: 0; 
+  margin-top: auto; 
 }
 
 /* Botones individuales */
@@ -125,50 +172,40 @@
 .notReadsChats, 
 .favChats, 
 .groupChats {
-  flex: 1 1 calc(25% - 8px); 
+  flex: 1 1 calc(25% - 8px);
   max-width: 150px;
-  min-width: 80px; 
+  min-width: 80px;
   background-color: rgb(32, 44, 51);
   border: none;
   border-radius: 42px;
-  box-sizing: border-box;
   color: rgb(134, 150, 160);
   cursor: pointer;
   font-family: "SF Pro Text", "SF Pro Icons", system, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Ubuntu, Cantarell, "Fira Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
   height: 32px;
-  line-height: 20px;
-  margin: 0;
   padding: 6px 12px;
   text-align: center;
   transition: all 0.3s ease;
 }
-
 
 .allChats {
   background-color: #0a332c;
   color: #00a884;
 }
 
-
-.chatsButtons > :last-child {
-  margin-right: auto; 
-}
-
-
+/* Estilos responsivos */
 @media (max-width: 768px) {
   .chatsButtons {
     justify-content: flex-start;
-    gap: 8px; 
+    gap: 8px;
   }
 
   .allChats, 
   .notReadsChats, 
   .favChats, 
   .groupChats {
-    flex: 1 1 calc(50% - 8px); 
-    max-width: unset; 
+    flex: 1 1 calc(50% - 8px);
   }
 }
 
@@ -177,10 +214,9 @@
   .notReadsChats, 
   .favChats, 
   .groupChats {
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
   }
 }
-
 
 /* Header de la sidebar */
 .contactSidebarHeader {
@@ -195,7 +231,6 @@
   width: 100%;
 }
 
-
 .contactSidebarHeader h2 {
   font-size: 1.375rem;
   font-weight: bold;
@@ -203,7 +238,6 @@
   color: #E9EDEF;
   white-space: nowrap;
   overflow: hidden;
-
   line-height: 32px;
 }
 
@@ -257,4 +291,48 @@
   height: 20px;
   color: rgb(209, 215, 219);
   margin-right: 10px;
+}
+
+/* Estilo del cartel de WhatsApp */
+.whatsappPrompt {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #111B21;
+  border-bottom: 1px solid #2a2f32;
+  z-index: 900;
+  height: 63px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+/* Estilo del texto */
+.whatsappText {
+  color: rgb(0,168,132);
+  font-size: 1.0625rem;
+  margin-left: 8px; 
+  flex-grow: 1; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+/* Estilo del icono de WhatsApp */
+.whatsappIcon {
+  color: white;
+  background-color: rgb(37,211,102);
+  height: 40px; 
+  width: 40px;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0; 
+  margin-left: 8px; 
 }

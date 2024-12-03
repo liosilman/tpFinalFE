@@ -43,7 +43,16 @@
                 id: 5,
                 texto: 'Messirveeeeee',
                 status: 'visto'
-            },]
+            },
+            {
+                emisor: 'YO',
+                hora: '22:30',
+                id: 6,
+                texto: 'Dale papaaaaa, nos vemos a la noche!',
+                status: 'visto'
+            },
+        ]
+
     },
     
     {

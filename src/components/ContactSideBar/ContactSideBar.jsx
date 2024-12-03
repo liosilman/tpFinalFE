@@ -1,7 +1,7 @@
 import React from "react";
 import { BiCommentAdd } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaCheckDouble, FaCheck } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import "./ContactSideBar.css";
 import initialContacts from "../../data/WhatsAppData"; // Ajusta la ruta según tu estructura de carpetas
@@ -9,7 +9,7 @@ import initialContacts from "../../data/WhatsAppData"; // Ajusta la ruta según 
 function ContactSideBar({ onContactClick }) {
   return (
     <div className="contactSidebar">
-      {/* Header de SideBar*/}
+      {/* Header de SideBar */}
       <header className="contactSidebarHeader">
         <h2>Chats</h2>
         <div className="contactSidebarHeaderIcons">
@@ -19,18 +19,17 @@ function ContactSideBar({ onContactClick }) {
       </header>
       <div className="search-container">
         <span className="search-icon"> <IoIosSearch /></span>
-        <input type="text"  placeholder="Buscar" className="search-input" />
-         
+        <input type="text" placeholder="Buscar" className="search-input" />
       </div>
-
 
       {/* Botones de Chats */}
       <div className="chatsButtons">
         <button className="allChats">Todos</button>
-        <button className="notReadsChats">No leìdos</button>
+        <button className="notReadsChats">No leídos</button>
         <button className="favChats">Favoritos</button>
         <button className="groupChats">Grupos</button>
       </div>
+
       {/* Botón de "Chats archivados" */}
       <div className="archivados">
         <span className="archivadosIcon">
@@ -59,27 +58,59 @@ function ContactSideBar({ onContactClick }) {
             className="contact-item"
             onClick={() => onContactClick(contact)}
           >
-            <img
-              src={contact.avatar}
-              alt={`${contact.nombre} avatar`}
-              className="contact-avatar"
-            />
+            {/* Avatar del contacto */}
+            <div className="contact-avatar-container">
+              <img
+                src={contact.avatar}
+                alt={`${contact.nombre} avatar`}
+                className="contact-avatar"
+              />
+            </div>
+
+            {/* Información del contacto */}
             <div className="contact-info">
               <p className="contact-name">{contact.nombre}</p>
-              <p className="contact-lastMessage">
-                {contact.mensajes.length > 0
-                  ? contact.mensajes[contact.mensajes.length - 1].texto
-                  : "No messages yet"}
-              </p>
+
+              {/* Último mensaje */}
+              <div className="contact-lastMessageWrapper">
+                <p className="contact-lastMessage">
+                  {contact.mensajes.length > 0
+                    ? contact.mensajes[contact.mensajes.length - 1].texto
+                    : "No messages yet"}
+                </p>
+
+                {/* Icono de estado del último mensaje */}
+                {contact.mensajes.length > 0 &&
+                  contact.mensajes[contact.mensajes.length - 1].emisor === "YO" && (
+                    <span className="contact-statusIcon">
+                      {contact.mensajes[contact.mensajes.length - 1].status === "visto" && (
+                        <FaCheckDouble className="statusIconRead" />
+                      )}
+                      {contact.mensajes[contact.mensajes.length - 1].status === "no-visto" && (
+                        <FaCheckDouble className="statusIconNotRead" />
+                      )}
+                      {contact.mensajes[contact.mensajes.length - 1].status === "no-recibido" && (
+                        <FaCheck className="statusIconSend" />
+                      )}
+                    </span>
+                  )}
+              </div>
+
+              {/* Hora del último mensaje */}
+              {contact.mensajes.length > 0 && (
+                <p className="contact-time">
+                  {contact.mensajes[contact.mensajes.length - 1].hora}
+                </p>
+              )}
             </div>
           </div>
         ))}
       </div>
 
       {/* WhatsApp sección */}
-      <div className="whatsapp-prompt">
-        <FaWhatsapp />
-        <span>Get WhatsApp for Windows</span>
+      <div className="whatsappPrompt">
+        <div className="whatsappIcon"><FaWhatsapp /></div>
+        <span className="whatsappText">Obtener WhatsApp para Windows</span>
       </div>
     </div>
   );

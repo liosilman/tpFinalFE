@@ -1,71 +1,76 @@
 /* src/screens/WhatsAppScreen.css */
+
+/* Contenedor principal */
 .whatsappScreenContainer {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: #111b21;
-    overflow: hidden;}
-  
-  .sideBarMiniContainer {
-    /* Mantén los estilos de la barra mini */
-    z-index: 10; /* Asegúrate de que se muestre encima */
-  }
-  
-  .sideBarContainer {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-basis: 30%;
-    flex-direction: column;
-    flex-grow: 0;
-    flex-shrink :0;
-    height: 100vh;
-    margin-bottom: 0px;
-    margin-left: 64px;
-    margin-right: 0px;
-    margin-top: 0px;
-    max-width: 40%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 0px;
-    width: 10%;
-    z-index :30;
-    background-color: #111b21;
-  }
-  
+  display: flex;
+  height: 100vh; /* Aseguramos que el contenedor principal ocupe toda la altura */
+  width: 100%;
+  background-color: #111b21;
+  overflow: hidden; /* Evita el scroll en el contenedor principal */
+}
+
+/* Contenedor de la barra lateral mini */
+.sideBarMiniContainer {
+  z-index: 10;
+}
+
+/* Contenedor de la barra lateral */
+.sideBarContainer {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100vh; /* Aseguramos que la barra lateral ocupe toda la pantalla */
+  margin-left: 64px;
+  margin-right: 0;
+  margin-top: 0;
+  max-width: 40%;
+  overflow: hidden;
+  padding: 0;
+  background-color: #111b21;
+}
+
+/* Contenedor principal de chat */
 .mainChatContainer {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    background-size: cover;
-    background-image: url('/images/wpp-background.png'); /* Ruta directa desde public */
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-.chatContainer 
-{
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    height: 100vh;
-    margin: 0px;
-}
-
-
-.fondo-chat{
-  background-image: url('./img/fondo-chat.png');
-  background-size: cover; 
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100vw;
+  height: 100vh; /* Aseguramos que el contenedor de chat ocupe toda la altura */
+  margin: 0;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center;  
-  width: 100%; 
-  height: 100vh;
 }
+
+/* Placeholder cuando no hay contacto seleccionado */
+.placeholder img {
+  position: absolute; /* Coloca la imagen de fondo en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que el placeholder ocupe todo el espacio disponible */
+  height: 100%; /* Asegura que el placeholder ocupe toda la altura disponible */
+  background-image: url('./img/fondo-chat.png'); /* Asegura la ruta correcta de la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Contenedor del chat, dentro del mainChatContainer */
+.chatContainer {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+  margin: 0;
+}
+
+

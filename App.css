@@ -3,6 +3,7 @@
 /* APP CSS */
 /*Variables*/
 body {
+    
     --white: #fff;
     --light-gray-background: #F0F2F5;
     --light-gray-1: #DFE5E7;
@@ -15,7 +16,6 @@ body {
     --icon-gray: #8696A0;
     --light-green: #D9FDD3;
     --dark-green-font-color: #008069;
-    background-image: url("./assets/whatsapp-screenshot-2.png");
     background-size: 1535px;
     margin: 0;
 
@@ -47,4 +47,28 @@ body {
 
 .medium-icon-1{
     color: var(--medium-gray-1);
+}
+
+/* CSS Reset Global para eliminar márgenes, paddings y asegurar un box-sizing consistente */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que padding y bordes no aumenten el ancho del elemento */
+}
+
+/* Garantizamos que el contenido se ajuste al tamaño de la ventana */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* O la tipografía que uses */
+  overflow-x: hidden; /* Deshabilita cualquier desbordamiento horizontal */
+}
+
+/* Establece un fondo básico para todo el sitio */
+body {
+  background-color: #111B21;
+  color: #E9EDEF;
+  font-size: 16px;
 }

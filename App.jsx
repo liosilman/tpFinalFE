@@ -1,7 +1,6 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // Usa Routes y Route para definir tus rutas
+import { Routes, Route } from 'react-router-dom'; 
 import WhatsAppScreen from "./src/screens/WhatsAppScreen";
-import HomeScreen from "./src/screens/HomeScreen";
 import './App.css';
 
 const App = () => {
