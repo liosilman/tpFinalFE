@@ -1,0 +1,17 @@
+.messagesList {  
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 10px;
+    flex-grow: 1;
+    
+    max-height: 100vh;
+    overflow-y: auto;   
+}
+.messageContainer.user {
+    background-color: #202C33;  /* Fondo gris claro */
+    align-self: flex-start;  /* Alinea el mensaje a la izquierda */
+    text-align: left;  /* Alinea el texto a la izquierda */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);  /* Agrega sombra sutil */
+  }   
+

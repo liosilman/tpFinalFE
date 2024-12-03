@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap');
+
+/* APP CSS */
+/*Variables*/
+body {
+    --white: #fff;
+    --light-gray-background: #F0F2F5;
+    --light-gray-1: #DFE5E7;
+    --medium-gray-1: #A2ACB2;
+    --dark-gray-1: #54656F;
+    --dark-gray-2: #3B4A54;
+    --gray-font-color: #667781;
+    --dark-font-color: #111B21;
+    --icon-viewed: #5BC1E9;
+    --icon-gray: #8696A0;
+    --light-green: #D9FDD3;
+    --dark-green-font-color: #008069;
+    background-image: url("./assets/whatsapp-screenshot-2.png");
+    background-size: 1535px;
+    margin: 0;
+
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+    /* "Inter" */
+}
+
+
+.comparison{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.screenshot img{
+    background-color: #F0F2F5;
+    width: 860px;
+}
+
+.light-icon-1{
+    color: var(--light-gray-1);
+}
+
+.medium-icon-1{
+    color: var(--medium-gray-1);
+}

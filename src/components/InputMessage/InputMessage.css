@@ -1,0 +1,106 @@
+.inputMessageContainer {
+    /* Colores */
+    background-color: #202C33;
+  
+    /* Display */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  
+    /* Otros */
+    font-size: 1rem;
+    padding: 0.6rem 0 0.7rem 1.7rem;
+  }
+  
+  /* Formulario */
+  .messageForm {
+    /* Display */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+  
+    /* Otros */
+    height: 100%;
+    padding-left: 1.2rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  
+  .messageForm input {
+    /* Colores */
+    background-color: #2A3942;
+    color: var(--dark-gray-2);
+  
+    /* Otros */
+    border: none;
+    border-radius: 9px;
+    font-size: 1rem;
+    height: 2.7rem;
+    padding-left: 0.9rem;
+    width: 100%;
+  }
+  
+  .messageForm input:focus {
+    outline: none;
+  }
+  
+  .messageForm input:focus + .message-input-label {
+    display: none;
+  }
+  
+  .message-input-label {
+    /* Colores */
+    color: var(--dark-gray-1);
+  
+    /* Display */
+    left: 2.2rem;
+    position: absolute;
+    top: 30%;
+  
+    /* Otros */
+    cursor: text;
+    font-size: 1rem;
+  }
+  
+  /* Iconos */
+  .leftIcons {
+    /* Display */
+    display: flex;
+    gap: 1rem;
+    color: #8696A0;
+  }
+  
+  .buttonIcon {
+    /* Colores */
+    background: none;
+    border: none;
+    color: #8696A0;
+  
+    /* Display */
+    display: flex;
+    align-items: center;
+  
+    /* Otros */
+    font-size: 2rem;
+  }
+  
+  .buttonIcon:hover {
+    cursor: pointer;
+  }
+  
+  .sendIcon {
+    /* Display */
+    position: absolute;
+    right: -29px;
+  
+    /* Otros */
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    transform: rotate(43deg);
+  }
+  
+  .microphone-icon {
+    font-size: 0.9rem;
+  }
+  

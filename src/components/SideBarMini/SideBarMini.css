@@ -1,0 +1,60 @@
+.sidebarMini {
+  height: 100%;
+  width: 64px;
+  background-color: #202c33;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebarMiniAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.chatIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #B8C7D0;
+  cursor: pointer;
+
+  padding: 8px;
+}
+.chatIcon:hover {
+  color: #E9EDEF;
+}
+.statusIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #E9EDEF;
+  cursor: pointer;
+
+}
+
+.channelIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #E9EDEF;
+  cursor: pointer;
+
+}
+
+.upperButtons,
+.lowerButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Espaciado entre botones */
+}
+

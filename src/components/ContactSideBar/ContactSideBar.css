@@ -1,0 +1,220 @@
+/* Contenedor principal de la barra lateral */
+.contactSidebar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  display: flex;
+  flex-direction: column;
+  background-color: #111B21; /* Fondo oscuro estilo WhatsApp */
+}
+
+/* Botón de "Chats archivados" */
+.archivados {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #111B21;
+  border-bottom: 1px solid #2a2f32; /* Color del borde para integrar con el fondo */
+}
+
+.archivados:hover {
+  background-color: #202C33;
+}
+
+.archivadosIcon {
+  margin-right: 10px;
+}
+
+.archivadosText {
+  flex-grow: 1;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 21px;
+  color: #e9edef;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* Lista de contactos */
+.contacts-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-y: auto; /* Barra de desplazamiento solo vertical */
+  height: calc(100% - 60px); /* Ajusta según el tamaño total de la barra lateral */
+}
+
+.contact-item {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #2a2f32;
+}
+
+.contact-item:hover {
+  background-color: #202C33;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; /* Ajusta la imagen proporcionalmente */
+  margin-right: 10px;
+  border: 2px solid #2a2f32;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #E9EDEF;
+}
+
+.contact-lastMessage {
+  font-size: 0.9em;
+  color: #8696A0;
+}
+
+/* Barra de desplazamiento personalizada */
+.contacts-list {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 #111B21; /* Firefox */
+}
+
+.contacts-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contacts-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.contacts-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.contacts-list::-webkit-scrollbar-track {
+  background: #111B21;
+}
+
+/* Sección de botones de chats */
+.chatsButtons {
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      gap: 8px;
+}
+
+
+.allChats {
+  display: inline-flex; /* Permite que cada botón se alinee en línea */
+  background-color: #0a332c;
+  color: #00a884;
+}
+
+.allChats, .notReadsChats, .favChats, .groupChats {
+  display: inline-flex; /* Permite que cada botón se alinee en línea */
+  flex-direction: column;
+  padding: 6px 12px;
+  font-size: .9375rem;
+  background-color: #202c33;
+  color: #8696a0;
+  cursor: pointer;
+  border-radius: 42px;
+  line-height: 1.333;
+  padding: 6;
+}
+
+.chatsButtons > .allChats:last-child,
+.chatsButtons > .notReadsChats:last-child,
+.chatsButtons > .favChats:last-child,
+.chatsButtons > .groupChats:last-child {
+  margin-right: 0; /* Elimina el margen derecho en el último botón */
+}
+/* Header de la sidebar */
+.contactSidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 10px;
+  background-color: #111B21;  /* Fondo oscuro */
+  color: #E9EDEF;  /* Texto claro */
+  height: 60px; /* Altura del header */
+}
+
+/* Título del Header */
+.contactSidebarHeader h2 {
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin: 0;
+  color: #E9EDEF;
+  white-space: nowrap;
+  overflow: hidden;
+
+  line-height: 32px;
+}
+
+/* Contenedor de los íconos del header */
+.contactSidebarHeaderIcons {
+  display: flex;
+  gap: 12px; /* Espacio entre los íconos */
+  align-items: center;
+}
+
+.contactSidebarHeaderIcons .icon {
+  font-size: 1.5em; /* Tamaño de los íconos */
+  cursor: pointer;
+  color: #B8C7D0; /* Color de los íconos */
+  transition: color 0.3s ease; /* Transición al pasar el mouse */
+}
+
+.contactSidebarHeaderIcons .icon:hover {
+  cursor: pointer;
+}
+
+/* Estilo para el contenedor de búsqueda */
+.search-container {
+  height: 44px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #202C33;  /* Fondo gris oscuro */
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 20px;
+  flex-direction: row-reverse; /* Cambia el orden para que el ícono esté a la izquierda */
+
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #E9EDEF;
+  font-size: 1em;
+  width: 100%;
+  padding: 5px 5px 5px 25px; /* Agregar padding izquierdo para espacio entre ícono y texto */
+}
+
+.search-icon {  
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px; /* Puedes ajustar este margen si es necesario */
+  cursor: pointer;
+  color: #B8C7D0;
+  align-self: center;
+  transition: color 0.3s ease;
+}

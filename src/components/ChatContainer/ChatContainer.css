@@ -1,0 +1,9 @@
+.chatContainer {
+    background-image: "url('/images/wpp-background.png');";  /* Fondo oscuro similar a WhatsApp Web en Dark Mode */
+    color: white;  /* Texto blanco en el chat */
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
