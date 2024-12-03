@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Messages from "../Messages/Messages"; // Componente para mostrar los mensajes
 import InputMessage from "../InputMessage/InputMessage"; // Componente para el campo de entrada del mensaje
-import ChatHeader from "../ChatHeader/ChatHeader"; // Barra de navegación del chat (opcional)
 import "./ChatContainer.css";
-
 
 const ChatContainer = ({ selectedContact, onSendMessage }) => {
   const [messageText, setMessageText] = useState("");
@@ -18,15 +16,24 @@ const ChatContainer = ({ selectedContact, onSendMessage }) => {
 
   return (
     <div className="chatContainer">
-      
-        {selectedContact?.mensajes?.length > 0 ? (
-          // Si existen mensajes, los renderizamos
+      {/* Si no hay un chat seleccionado, mostrar la imagen de bienvenida */}
+      {!selectedContact ? (
+        <div className="placeholderContainer">
+          <img
+            src="/images/home-bg.png"
+            alt="Chat de bienvenida"
+            className="placeholderImage"
+          />
+          <p className="placeholderText">Selecciona un chat para comenzar.</p>
+        </div>
+      ) : (
+        <>
+          {/* Si hay un contacto seleccionado, mostramos los mensajes */}
           <Messages mensajes={selectedContact.mensajes} />
-        ) : (
-          // Si no hay mensajes
-          <p>No hay mensajes aún.</p>
-        )}
+        </>
+      )}
       
+      {/* Componente para la entrada de mensajes */}
       <div className="inputContainer">
         <InputMessage
           messageText={messageText}

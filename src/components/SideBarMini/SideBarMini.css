@@ -50,6 +50,14 @@
 
 }
 
+.communityIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #E9EDEF;
+  cursor: pointer;
+}
+
 .upperButtons,
 .lowerButtons {
   display: flex;

@@ -3,7 +3,6 @@
   width: 100%;
   height: 100%;
   overflow: hidden; /* Oculta cualquier desbordamiento */
-  display: flex;
   flex-direction: column;
   background-color: #111B21; /* Fondo oscuro estilo WhatsApp */
 }
@@ -109,13 +108,13 @@
 
 /* Sección de botones de chats */
 .chatsButtons {
-  display: flex;
+  display: flex
+  ;
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
       gap: 8px;
 }
-
 
 .allChats {
   display: inline-flex; /* Permite que cada botón se alinee en línea */
@@ -124,16 +123,29 @@
 }
 
 .allChats, .notReadsChats, .favChats, .groupChats {
-  display: inline-flex; /* Permite que cada botón se alinee en línea */
-  flex-direction: column;
-  padding: 6px 12px;
-  font-size: .9375rem;
-  background-color: #202c33;
-  color: #8696a0;
-  cursor: pointer;
+  
+
+  background-color: rgb(32, 44, 51);
+  border: 0px none rgb(134, 150, 160);
   border-radius: 42px;
-  line-height: 1.333;
-  padding: 6;
+  box-sizing: border-box;
+  color: rgb(134, 150, 160);
+  cursor: pointer;
+  display: block;
+  font-family: "SF Pro Text", "SF Pro Icons", system, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Ubuntu, Cantarell, "Fira Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  height: 31.9844px;
+  line-height: 19.995px;
+  margin: 0px;
+  padding: 6px 12px;
+  position: static;
+  text-align: center;
+  text-decoration: none solid rgb(134, 150, 160);
+  text-transform: none;
+  width: 87.2188px;
+
+ 
 }
 
 .chatsButtons > .allChats:last-child,
@@ -151,7 +163,8 @@
   padding-right: 10px;
   background-color: #111B21;  /* Fondo oscuro */
   color: #E9EDEF;  /* Texto claro */
-  height: 60px; /* Altura del header */
+  height: 64px; /* Altura del header */
+  width: 100%;
 }
 
 /* Título del Header */
@@ -186,35 +199,34 @@
 
 /* Estilo para el contenedor de búsqueda */
 .search-container {
-  height: 44px;
   display: flex;
-  position: relative;
   align-items: center;
-  background-color: #202C33;  /* Fondo gris oscuro */
-  padding-left: 12px;
-  padding-right: 12px;
-  border-radius: 20px;
-  flex-direction: row-reverse; /* Cambia el orden para que el ícono esté a la izquierda */
-
+  background-color: #202c33;
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 10px;
+  width: 95%;
+  height: 40px;
 }
 
-.search-input {
-  background: transparent;
+.search-container input {
+  background: none;
   border: none;
   outline: none;
-  color: #E9EDEF;
-  font-size: 1em;
+  color: #b8c7d0;
+  font-size: 14px;
   width: 100%;
-  padding: 5px 5px 5px 25px; /* Agregar padding izquierdo para espacio entre ícono y texto */
+  height: 100%;
 }
 
-.search-icon {  
-  background-size: contain;
+.search-container input::placeholder {
+  color: #54656f; /* Placeholder similar al diseño original */
+  font-size: 14px;
+}
+
+.search-icon {
   width: 20px;
   height: 20px;
-  margin-left: 8px; /* Puedes ajustar este margen si es necesario */
-  cursor: pointer;
-  color: #B8C7D0;
-  align-self: center;
-  transition: color 0.3s ease;
+  color: rgb(209, 215, 219);
+  margin-right: 10px;
 }

@@ -18,8 +18,9 @@ function ContactSideBar({ onContactClick }) {
         </div>
       </header>
       <div className="search-container">
-          <input type="text"  placeholder="Buscar" className="search-input" />
-          <span className="search-icon"><IoIosSearch/></span>
+        <span className="search-icon"> <IoIosSearch /></span>
+        <input type="text"  placeholder="Buscar" className="search-input" />
+         
       </div>
 
 
