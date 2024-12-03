@@ -7,7 +7,7 @@ import './App.css';
 const App = () => {
   return (
     <Routes>
-      <Route path="/home" element={<HomeScreen />} />
+      <Route path="/" element={<WhatsAppScreen />} />
       <Route path="/chat/:contactId" element={<WhatsAppScreen />} />
     </Routes>
   );
