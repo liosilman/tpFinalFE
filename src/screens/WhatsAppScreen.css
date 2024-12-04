@@ -1,12 +1,12 @@
-/* src/screens/WhatsAppScreen.css */
+
 
 /* Contenedor principal */
 .whatsappScreenContainer {
   display: flex;
-  height: 100vh; /* Aseguramos que el contenedor principal ocupe toda la altura */
+  height: 100vh; 
   width: 100%;
   background-color: #111b21;
-  overflow: hidden; /* Evita el scroll en el contenedor principal */
+  overflow: hidden; 
 }
 
 /* Contenedor de la barra lateral mini */
@@ -23,7 +23,7 @@
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
-  height: 100vh; /* Aseguramos que la barra lateral ocupe toda la pantalla */
+  height: 100vh; 
   margin-left: 64px;
   margin-right: 0;
   margin-top: 0;
@@ -41,7 +41,7 @@
   flex-direction: column;
   flex-grow: 1;
   width: 100vw;
-  height: 100vh; /* Aseguramos que el contenedor de chat ocupe toda la altura */
+  height: 100vh;
   margin: 0;
   background-size: cover;
   background-position: center;
@@ -50,15 +50,16 @@
 
 /* Placeholder cuando no hay contacto seleccionado */
 .placeholder img {
-  position: absolute; /* Coloca la imagen de fondo en la parte superior */
+  position: absolute; 
   top: 0;
   left: 0;
-  width: 100%; /* Asegura que el placeholder ocupe todo el espacio disponible */
-  height: 100%; /* Asegura que el placeholder ocupe toda la altura disponible */
-  background-image: url('./img/fondo-chat.png'); /* Asegura la ruta correcta de la imagen */
+  width: 100%; 
+  height: 100%; 
+  background-image: url('./img/fondo-chat.png'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 1001;
 }
 
 
