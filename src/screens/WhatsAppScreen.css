@@ -83,16 +83,16 @@
   }
 
   .mainChatContainer {
-    height: calc(100vh - 60px); 
+    height: calc(100vh - 0px); 
   }
 
   .placeholder img {
     width: 100%;
-    height: auto; 
+    height: 100vh; 
   }
 
   .chatContainer {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 0px);
   }
 
   .sideBarMiniContainer {
@@ -109,16 +109,16 @@
 
   .mainChatContainer {
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 0px);
   }
 
   .placeholder img {
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
 
   .chatContainer {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 0px);
   }
 
   
@@ -136,16 +136,16 @@
 
   .mainChatContainer {
     width: 100vw;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 0px);
   }
 
   .placeholder img {
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
 
   .chatContainer {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 0px);
   }
 }
 
@@ -163,7 +163,7 @@
 
   .placeholder img {
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
 
   .chatContainer {
@@ -185,7 +185,7 @@
 
   .placeholder img {
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
 
   .chatContainer {
