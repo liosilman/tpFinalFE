@@ -1,36 +1,80 @@
+/* Estilo principal del contenedor del chat */
 .chatContainer {
-    background-image: url('/images/wpp-background.png'); 
-    background-color: #1e2326; 
-    background-size: cover; 
-    background-position: center;
-    color: white;  
-    display: flex;
-    flex-direction: column;
-    height: 100vh;  
-    scroll-behavior: smooth;
-    overflow: hidden;
-    border-left-color: rgb(209, 215, 219);
-  }
-  
-  .placeholderContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;  
-    text-align: center;
-    color: #b8c7d0; 
-    background-image: url('/images/home-bg.png');
-  }
-  
-  .placeholderImage {
-    max-width: 200px;
-    margin-bottom: 16px;
-    opacity: 0.8;
-  }
-  
-  .placeholderText {
-    font-size: 18px;
-    color: #b8c7d0; /* Color del texto */
-  }
-  
+  background-image: url('/images/wpp-background.png'); 
+  background-color: #1e2326; 
+  background-size: cover; 
+  background-position: center;
+  color: white;  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  
+  scroll-behavior: smooth;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Estilo del contenedor del input */
+.inputMessageContainer {
+  background-color: #202C33;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 0.65rem; /* Reducir tamaño de fuente */
+  padding: 0.5rem 0 0.6rem 1.5rem; /* Ajustar padding para mayor compacidad */
+  box-sizing: border-box; /* Asegurarse de que el padding no afecte el tamaño */
+}
+
+/* Formulario */
+.messageForm {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0 1rem; /* Ajustar el padding del formulario */
+}
+
+/* Input */
+.messageForm input {
+  background-color: #2A3942;
+  color: #D1D7DB;
+  border: 1px solid #4A5861; /* Asegurarse de que el borde sea visible */
+  border-radius: 9px;
+  font-size: 0.9rem; 
+  height: 2.4rem; 
+  padding-left: 0.8rem; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cuando el input está en foco */
+.messageForm input:focus {
+  outline: none;
+  border: 1px solid #34b7f1; /* Resaltar cuando el input está enfocado */
+}
+
+.messageForm input::placeholder {
+  color: #A1A1A1;
+  opacity: 1;
+  font-size: 0.85rem;
+}
+
+/* Iconos */
+.leftIcons {
+  display: flex;
+  gap: 0.8rem; 
+  color: #8696A0;
+}
+
+.buttonIcon {
+  background: none;
+  border: none;
+  color: #8696A0;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.buttonIcon:hover {
+  cursor: pointer;
+}

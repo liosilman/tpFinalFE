@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid"; 
 import initialContacts from "../data/WhatsAppData";
-import ContactSideBar from "../components/ContactSideBar/ContactSideBar";
+import Sidebar from "../components/Sidebar/SideBar";
 import ChatContainer from "../components/ChatContainer/ChatContainer";
 import "./WhatsAppScreen.css";
 import SideBarMini from "../components/SideBarMini/SideBarMini";
@@ -71,7 +71,7 @@ const WhatsAppScreen = () => {
     <div className="whatsappScreenContainer">
       <SideBarMini />
       <div className="sideBarContainer">
-        <ContactSideBar
+        <Sidebar
           contacts={contactsState}
           onContactClick={(contact) => {
             setSelectedContact(contact);

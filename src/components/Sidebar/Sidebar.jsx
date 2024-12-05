@@ -3,12 +3,12 @@ import { BiCommentAdd } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaWhatsapp, FaCheckDouble, FaCheck } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
-import "./ContactSideBar.css";
+import "./Sidebar.css";
 import initialContacts from "../../data/WhatsAppData"; // Ajusta la ruta según tu estructura de carpetas
 
 function ContactSideBar({ onContactClick }) {
   return (
-    <div className="contactSidebar">
+    <div className="sidebarContainer">
       {/* Header de SideBar */}
       <header className="contactSidebarHeader">
         <h2>Chats</h2>

@@ -1,4 +1,4 @@
-.sidebarMini {
+.sidebarMiniContainer {
   height: 100%;
   width: 64px;
   background-color: #202c33;
@@ -58,30 +58,24 @@
 }
 
 .communityIcon svg {
-  width: 24px; /* Ajusta el tamaño del icono */
+  width: 24px; 
   height: 24px;
 }
 
 .settingsButton {
-  display: inline-flex; /* Asegura que el contenido interno se alinee correctamente */
+  display: inline-flex; 
   justify-content: center;
   align-items: center;
-  background-color: #202c33; /* Fondo del botón */
-  color: rgb(174, 186, 193); /* Color del ícono */
-  border-radius: 50%; /* Hace que el botón sea circular */
-  width: 40px; /* Ancho del botón */
-  height: 40px; /* Alto del botón */
-  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: #202c33; 
+  color: rgb(174, 186, 193);
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px;
   cursor: pointer;
 }
 
-.settingsButton:hover {
-  background-color: #2a3942; /* Cambia el color de fondo al pasar el mouse */
-  color: #d1d7db; /* Cambia el color del ícono al pasar el mouse */
-}
-
 .settingsButton svg {
-  width: 24px; /* Ajusta el tamaño del ícono */
+  width: 24px; 
   height: 24px;
 }
 
@@ -91,7 +85,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Espaciado entre botones */
+  gap: 20px; 
   line-height: 16px;
 }
 
+@media (max-width: 768px) {
+  .sidebarMiniContainer {
+    display: none;
+  }
+}
